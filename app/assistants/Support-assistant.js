@@ -22,6 +22,8 @@ SupportAssistant = Class.create(Twee.Base , {
 			supportitems.push({text: SupportInfo.supportEmail , address: SupportInfo.supportEmail , subject: Mojo.Controller.appInfo.title + " v" + Mojo.Controller.appInfo.version + " Support", Class:"img_email" , type:'email'});
 		}
 		
+		supportitems.push({text: "Follow @DeliciousMorsel", detail: "deliciousmorsel" , Class: 'img_follow' , type:'follow'});
+		
 		this.controller.setupWidget('AppSupport_list', 
 		    {
 				itemTemplate:'Support/listitem', 
@@ -72,6 +74,18 @@ SupportAssistant = Class.create(Twee.Base , {
 		  else if(event.item.type == 'scene')
 		  {
 		  	this.controller.stageController.pushScene(event.item.detail);	
+		  }
+		  else if(event.item.type == 'follow')
+		  {
+		  	this.controller.serviceRequest("palm://com.palm.applicationManager", {
+			  method: "open",
+			  parameters:  {
+			      id: 'com.deliciousmorsel.twee',
+			      params: {
+			          follow: event.item.detail
+			      }
+			  }
+			});
 		  }
 	},
 

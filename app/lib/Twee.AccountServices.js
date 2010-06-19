@@ -1570,6 +1570,25 @@ Twee.AccountServices = {
 				return $L("Twee does not have permissions to view this content.");
 			break;
 			
+			case 403:
+				try
+				{
+					var d = t.responseText.evalJSON();
+					if (d.error)
+					{
+						return d.error;
+					}
+					else
+					{
+						return $L("You user does not have access to this request.");
+					}
+				}
+				catch(e)
+				{
+					return $L("You user does not have access to this request.");
+				}
+			break;
+			
 			case 200:
 				return $L("Twitter returned back malformed data, please try again in a few minutes.");
 			break;

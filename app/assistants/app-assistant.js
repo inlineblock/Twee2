@@ -9,10 +9,21 @@ AppAssistant = Class.create({
 	{
 		o = o || {};
 		Mojo.Log.info('handleLaunch' , Object.toJSON(o));
+		
 		if (o.notifications)
 		{
 			var card = Twee.getCheckingForNotificationCard();
 			Twee.StageManager.newDashboard(card , 'NotificationsDaemon' , {cardName: card});
+		}
+		else if (o.tweet)
+		{
+			var card = Twee.getUnusedCard();
+			Twee.StageManager.newCard(card , 'ExternalRequest' , {tweet: o.tweet});
+		}
+		else if (o.follow)
+		{
+			var card = Twee.getUnusedCard();
+			Twee.StageManager.newCard(card , 'ExternalRequest' , {follow: o.follow});
 		}
 		else
 		{

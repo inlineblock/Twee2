@@ -111,6 +111,15 @@ Twee = {
 		}
 	},
 	
+	getUnusedCard: function()
+	{
+		Twee.cleanOpenCards();
+		var name = "anonymous__" + Twee.getBlankCardNumber(),
+			card = {name: name , meta: name};
+		Twee.openCards.push(card);
+		return card.name;
+	},
+	
 	userCardExists: function(user)
 	{
 		Twee.cleanOpenCards();

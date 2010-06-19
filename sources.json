@@ -123,5 +123,9 @@
     {
         "scenes": "NewDirectMessage",
         "source": "app/assistants/NewDirectMessage-assistant.js"
+    },
+    {
+        "scenes": "ExternalRequest",
+        "source": "app/assistants/ExternalRequest-assistant.js"
     }
 ]

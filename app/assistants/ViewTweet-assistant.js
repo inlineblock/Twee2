@@ -3,7 +3,7 @@ ViewTweetAssistant = Class.create(Twee.Base , {
 	locationTemplate: 'ViewTweet/location',
 	thumbnailTemplate: 'ViewTweet/thumbnail',
 	Binds: ['extraAreaClick' , 'tweetAreaClick' , 'nextTweetClick' , 'previousTweetClick' , 'controlGridAction' , 'retweetPrompt' , 'retweetCallBack' , 'deleteTweetCallBack' , 'deleteTweetPrompt' , 'favoriteTweetCallBack' , 'unfavoriteTweetPrompt' , 'unfavoriteTweetCallBack'],
-	
+	Menu: [{label: 'Copy Tweet' , command: 'copyTweet'}],
 	setup: function($super)
 	{
 		$super();
@@ -37,8 +37,6 @@ ViewTweetAssistant = Class.create(Twee.Base , {
 		}
 	},
 	
-	
-	
 	cleanup: function($super)
 	{
 		this.tweetArea.stopObserving(Mojo.Event.tap , this.tweetAreaClick);
@@ -48,6 +46,21 @@ ViewTweetAssistant = Class.create(Twee.Base , {
 		this.controlGrid.stopObserving("action" , this.controlGridAction);
 		this.controlGrid.cleanup();
 		$super();
+	},
+	
+	handleCommand: function(event)
+	{	
+		if(event.type == Mojo.Event.command) 
+		{
+			switch(event.command)
+			{
+				case 'copyTweet':
+					this.controller.stageController.setClipboard(this.tweet.originalText , this.tweet.originalText);
+					return;
+				break;
+			}
+		}
+		return this.doHandleCommand(event);
 	},
 	
 	renderTweetArea: function()

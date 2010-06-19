@@ -101,7 +101,14 @@ Twee.Nav = Class.create({
 		var el = evt.target;
 		if (!el.hasClassName(this.tabClassName) || el.hasClassName(this.activeClassName))
 		{
-			return;
+			if (el.tagName.toLowerCase() == "b")
+			{
+				el = el.up('.' + this.tabClassName);
+			}
+			else
+			{
+				return;
+			}
 		}
 		this.activateTab(el.readAttribute('for'));
 		this.lastChange = new Date().getTime();
