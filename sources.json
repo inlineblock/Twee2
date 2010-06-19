@@ -1,0 +1,127 @@
+[
+    {"source": "app/lib/MooGap.js"},
+    {"source": "app/lib/Date.js"},
+    {"source": "app/lib/Sha1.js"},
+    {"source": "app/lib/OAuth.js"},
+    {"source": "app/lib/Morsel.js"},
+    {"source": "app/lib/Morsel.StageManager.js"},
+    {"source": "app/lib/Twee.js"},
+    {"source": "app/lib/Twee.Base.js"},
+    {"source": "app/lib/Twee.Account.js"},
+    {"source": "app/lib/Twee.AccountManager.js"},
+    {"source": "app/lib/Twee.AccountServices.js"},
+    {"source": "app/lib/Twee.AccountListServices.js"},
+    {"source": "app/lib/Twee.AccountServicesScrubbers.js"},
+    {"source": "app/lib/Twee.ControlGrid.js"},
+    {"source": "app/lib/Twee.MyAccountView.js"},
+    {"source": "app/lib/Twee.Nav.js"},
+    {"source": "app/lib/Twee.Preferences.js"},
+    {"source": "app/lib/Twee.SearchView.js"},
+    {"source": "app/lib/Twee.Trend.js"},
+    {"source": "app/lib/Twee.TrendView.js"},
+    {"source": "app/lib/Twee.Tweet.js"},
+    {"source": "app/lib/Twee.TweetUser.js"},
+    {"source": "app/lib/Twee.URLTrend.js"},
+    {"source": "app/lib/Twee.List.js"},
+    {"source": "app/lib/Twee.ListStatusesList.js"},
+    {"source": "app/lib/Twee.FavoritesList.js"},
+    {"source": "app/lib/Twee.ConversationList.js"},
+    {"source": "app/lib/Twee.UsersTweetsList.js"},
+    {"source": "app/lib/Twee.RetweetList.js"},
+    {"source": "app/lib/Twee.SearchList.js"},
+    {"source": "app/lib/Twee.UserList.js"},
+    {"source": "app/lib/Twee.UserSearchList.js"},
+    {"source": "app/lib/Twee.Notifications.js"},
+    {"source": "support_info.js"},
+    {"source": "app/assistants/app-assistant.js"},
+    {"source": "app/assistants/stage-assistant.js"},
+    {"source": "app/assistants/NewTweet-assistant.js"},
+    {
+        "scenes": "ManageAccounts",
+        "source": "app/assistants/ManageAccounts-assistant.js"
+    },
+    {
+        "scenes": "AddAccount",
+        "source": "app/assistants/AddAccount-assistant.js"
+    },
+    {
+        "scenes": "Support",
+        "source": "app/assistants/Support-assistant.js"
+    },
+    {
+        "scenes": "Preferences",
+        "source": "app/assistants/Preferences-assistant.js"
+    },
+    {
+        "scenes": "Main",
+        "source": "app/assistants/Main-assistant.js"
+    },
+    {
+        "scenes": "ViewTweet",
+        "source": "app/assistants/ViewTweet-assistant.js"
+    },
+    {
+        "scenes": "ViewSearch",
+        "source": "app/assistants/ViewSearch-assistant.js"
+    },
+    {
+        "scenes": "DisplayImage",
+        "source": "app/assistants/DisplayImage-assistant.js"
+    },
+    {
+        "scenes": "ViewUser",
+        "source": "app/assistants/ViewUser-assistant.js"
+    },
+    {
+        "scenes": "NewTweet",
+        "source": "app/assistants/NewTweet-assistant.js"
+    },
+    {
+        "scenes": "ViewConversation",
+        "source": "app/assistants/ViewConversation-assistant.js"
+    },
+    {
+        "scenes": "ViewUserSearch",
+        "source": "app/assistants/ViewUserSearch-assistant.js"
+    },
+    {
+        "scenes": "ViewFavorites",
+        "source": "app/assistants/ViewFavorites-assistant.js"
+    },
+    {
+        "scenes": "ViewUsersTweets",
+        "source": "app/assistants/ViewUsersTweets-assistant.js"
+    },
+    {
+        "scenes": "ViewFollowers",
+        "source": "app/assistants/ViewFollowers-assistant.js"
+    },
+    {
+        "scenes": "ViewFollowing",
+        "source": "app/assistants/ViewFollowing-assistant.js"
+    },
+    {
+        "scenes": "ViewRetweetsOf",
+        "source": "app/assistants/ViewRetweetsOf-assistant.js"
+    },
+    {
+        "scenes": "ViewRetweetsBy",
+        "source": "app/assistants/ViewRetweetsBy-assistant.js"
+    },
+    {
+        "scenes": "ViewList",
+        "source": "app/assistants/ViewList-assistant.js"
+    },
+    {
+        "scenes": "NotificationsDaemon",
+        "source": "app/assistants/NotificationsDaemon-assistant.js"
+    },
+    {
+        "scenes": "NotificationDashboard",
+        "source": "app/assistants/NotificationDashboard-assistant.js"
+    },
+    {
+        "scenes": "NewDirectMessage",
+        "source": "app/assistants/NewDirectMessage-assistant.js"
+    }
+]

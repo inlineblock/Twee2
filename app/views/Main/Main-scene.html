@@ -1,0 +1,94 @@
+<div class="header-wrapper">
+	<div class="twee-header center" id="main-hdr">
+		...
+	</div>
+	<div id="write-icon"></div>
+</div>
+<div type="list" id="timeline-view" class="sub-view">
+	<div class="tweet-list"></div>
+	<div class="load-more"></div>
+	<div class="refresh-icon"></div>
+</div>
+<div type="list" id="mentions-view" class="sub-view">
+	<div class="tweet-list"></div>
+	<div class="load-more"></div>
+	<div class="refresh-icon"></div>
+</div>
+<div type="list" id="messages-view" class="sub-view">
+	<div class="tweet-list"></div>
+	<div class="load-more"></div>
+	<div class="refresh-icon"></div>
+</div>
+
+<div type="alt-view" id="trends-view" class="sub-view">
+	<div class="frame-wrapper">
+		<div class="frame-title">Trending Topics</div>
+		<div class="trend-list list"></div>
+		<div class="frame-footer" id="trend-list-footer"></div>
+	</div>
+	<div class="frame-wrapper">
+		<div class="frame-title">Trending URLs</div>
+		<div class="url-trend-list list"></div>
+		<div class="frame-footer">Powered by TweetMeme.com</div>
+	</div>
+	<div class="refresh-icon"></div>
+</div>
+
+<div type="alt-view" id="search-view" class="sub-view">
+	<div class="refresh-icon"></div>
+	<div class="frame-wrapper">
+		<div class="frame-title">Search Tweets</div>
+		<div class="input-row" x-mojo-focus-highlight="true">
+			<div x-mojo-element="TextField" id="searchTerms" class="input-text" name="searchTerms"></div>
+			<div class="search-button" id="search-button"></div>
+		</div>
+		<div class="saved-searches-list list"></div>
+		<div class="saved-searches-list-footer frame-footer"></div>
+	</div>
+	
+	<div class="frame-wrapper">
+		<div class="frame-title">Search Users</div>
+		<div class="input-row" x-mojo-focus-highlight="true">
+			<div x-mojo-element="TextField" id="searchUsers" class="input-text" name="searchTerms"></div>
+			<div class="search-button" id="user-search-button"></div>
+		</div>
+	</div>
+</div>
+
+
+<div type="alt-view" id="my-account-view" class="sub-view">
+	<div class="frame-wrapper">
+		<div class="frame-title">My Account</div>
+		<div id="my-account-actions" class="action-items">
+			<div class="full-action-item" x-mojo-tap-highlight="momentary">
+				<div class="title">View Profile</div>
+				<div class="arrow"></div>
+			</div>
+			<div class="full-action-item" x-mojo-tap-highlight="momentary">
+				<div class="title">View Favorites</div>
+				<div class="arrow"></div>
+			</div>
+			<div class="full-action-item" x-mojo-tap-highlight="momentary">
+				<div class="title">Retweets by Me</div>
+				<div class="arrow"></div>
+			</div>
+			<!--div class="full-action-item" x-mojo-tap-highlight="momentary">
+				<div class="title">Retweets of Me</div>
+				<div class="arrow"></div>
+			</div-->
+		</div>
+		
+	</div>
+	<div class="frame-wrapper">
+		<div class="frame-title">Lists</div>
+		<div id="lists-list" class="lists-list list"></div>
+		<div id="lists-list-footer" class="frame-footer"></div>
+	</div>
+</div>
+
+<div class="footer-wrapper">
+	<div id="twee-footer">
+		<div id="highlighter" class="init"></div>
+		<ul class="nav"><li class="nav-item timeline" for="timeline"><b></b></li><li class="nav-item mentions" for="mentions"><b></b></li><li class="nav-item messages" for="messages"><b></b></li><li class="nav-item trends" for="trends"><b></b></li><li class="nav-item search" for="search"><b></b></li><li class="nav-item my-account" for="my-account"><b></b></li></ul>
+	</div>
+</div>

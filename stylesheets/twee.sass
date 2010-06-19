@@ -1,0 +1,1182 @@
+!mainTextColor = #262626
+!altTextColor = #060606
+!thirdTextColor = #82bdff
+!darkAltTextColor = #467391
+!lightColor = #D9D9D9
+!midTextColor = #A0A0A0
+
+!backgroundColor = #FAFAFA
+!headerTextColor = #FAFAFA
+!retweetColor = #DF6F74
+
+body
+	font-size: 18px
+	&.large-font
+		font-size: 22px
+	&.small-font
+		font-size: 16px
+	.palm-dashboard-icon.twee
+		background: url(../images/icon_48x48.png) center center no-repeat
+	.dashboard-newitem
+		margin-top: -26px
+		margin-left: -6px
+	.img_email
+		position: relative
+		left: 8px
+		top: 10px
+		width: 32px 
+		height: 32px
+		background: url(../images/application-email.png) no-repeat bottom
+		vertical-align: bottom
+		padding: 0px 0px 0px 5x
+		float: left
+	
+	.img_phone
+		position: relative
+		left: 8px
+		top: 10px
+		width: 32px 
+		height: 32px
+		background: url(../images/application-phone.png) no-repeat bottom
+		padding: 0px 0px 0px 5px
+		float: left
+	
+	.img_web
+		position: relative
+		left: 8px
+		top: 10px
+		width: 32px 
+		height: 32px
+		background: url(../images/application-web.png) no-repeat bottom
+		padding: 0px 0px 0px 5px
+		float: left
+	#notifications-group
+		height: 0px
+		overflow: hidden
+		-webkit-transition-duration: 400ms
+		-webkit-transition-timing-function: ease-in
+		-webkit-transition-property: height
+		&.show
+			height: 300px
+	.sub-view
+		display: none
+		&.show
+			display: block
+		&.loading
+			.refresh-icon
+				background: url('../images/layout/refresh-icon-loading.gif') center center no-repeat
+			.load-more
+				background: url('../images/layout/load-more-loading.gif') center center no-repeat
+			.frame-wrapper
+				.list
+					min-height: 40px
+					background: #FAFAFA url('../images/layout/load-more-loading.gif') center center no-repeat
+					&.quiet
+						background-image: none
+	.fullscreen
+		position: fixed
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		background-color: #000
+		.fullscreen-item
+			position: absolute
+			top: 0px
+			left: 0px
+			right: 0px
+			bottom: 0px
+			&.loading
+				background: url('../images/display-pic-loader.gif') center center no-repeat
+	.twee-header
+		position: fixed
+		top: 0px
+		height: 52px
+		left: 0px
+		right: 0px
+		line-height: 44px
+		font-size: 1em
+		z-index: 6000
+		padding: 0 52px
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		&.full
+			padding: 0 10px
+	.on-header
+		position: fixed
+		top: 0px
+		height: 44px
+		right: 12px
+		width: 32px
+		z-index: 6005
+	.header-wrapper
+		height: 50px
+		&.buttup
+			height: 44px
+		
+	.center
+		text-align: center
+	.scrim
+		position: fixed
+		top: 0px
+		left: 0px
+		right: 0px
+		bottom: 0px
+		vertical-align: center
+		background: transparent url(../images/layout/scrim.png) center center no-repeat
+		z-index: 7000
+		.loading
+			border: 1px solid rgba(0,0,0,0.5)
+			background: rgba(0,0,0,0.7) url(../images/layout/loading.gif) center 40% no-repeat
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -55px 0 0 -75px
+			min-width: 120px
+			padding: 0 15px
+			height: 110px
+			white-space: nowrap
+			line-height: 170px
+			-webkit-border-radius: 6px
+			color: #F0F0F0
+			text-align: center
+	.refresh-icon
+		background: url('../images/layout/refresh-icon.png') center center no-repeat
+		width: 56px
+		height: 44px
+		top: 0px
+		left: 0px
+		z-index: 6001
+		position: fixed
+		&:active
+			background: url('../images/layout/refresh-icon-pushed.png') center center no-repeat
+	.load-more
+		height: 38px
+		margin-bottom: 8px
+		background: url('../images/layout/load-more.png') center center no-repeat
+		&:active
+			background: url('../images/layout/load-more-pushed.png') center center no-repeat
+		
+	#write-icon
+		background: url('../images/layout/write-button.png') center center no-repeat
+		width: 56px
+		height: 44px
+		top: 0px
+		right: 0px
+		z-index: 6001
+		position: fixed
+		&:active
+			background: url('../images/layout/write-button-pushed.png') center center no-repeat
+	#save-search
+		background: url('../images/layout/star-button.png') center center no-repeat
+		width: 56px
+		height: 44px
+		top: 0px
+		right: 0px
+		z-index: 6001
+		position: fixed
+		&:active
+			background: url('../images/layout/star-button-pushed.png') center center no-repeat
+			
+	.list-message
+		padding: 15px 25px 25px
+		font-size: 1.1em
+		text-align: center
+		line-height: 1.5em
+	.list
+		margin-bottom: 10px
+	.profile-image
+		img
+			background-color = !lightColor
+			width: 48px
+			height: 48px
+			max-width: 48px
+			max-height: 48px
+			-webkit-border-radius: 5px
+			border:
+				width: 1px
+				style: solid
+				color = !lightColor
+			box-shadow: 1px 1px 2px #666
+			-webkit-box-shadow: 1px 1px 2px #666
+	.account-list
+		.account
+			.profile-image
+				position: absolute
+				top: 6px
+				left: 8px
+			.username
+				height: 60px
+				margin-left: 64px
+				margin-right: 8px
+				line-height: 60px
+				font-size: 1.25em
+				overflow: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+	.input-group
+		margin: 10px
+		display: block
+		-webkit-border-radius: 8px
+		padding: 4px 2px
+		border:
+			width: 2px
+			style: solid
+			color = !lightColor
+		background-color: #FFF
+		.input-row
+			position: relative
+			border-top:
+				width: 1px
+				style: solid
+				color = !lightColor
+			height: 40px
+			&:first-child
+				border-top: none
+			
+			input,.truncating-text
+				background-color: transparent
+				padding: 0 0 0 110px
+				margin: 4px 0 0 0
+				height: 32px
+				line-height: 32px
+				font-size: 1.1em !important
+				border: none
+				right: 2px
+				left: 2px
+				position: absolute
+				width: auto !important
+				color = !darkAltTextColor
+			.truncating-text
+				margin-left: 1px
+			.hint-text
+				text-indent: -9999px
+			.input-hint
+				color: #333
+				position: absolute
+				line-height: 40px
+				font-size: 1em
+				display: block
+				left: 8px
+				width: 100px
+	.input-message
+		padding: 0 10px 10px 10px
+		margin: 0px
+		background: url(../images/layout/list-item.png) bottom left repeat-x
+		background-color = !backgroundColor
+		border-bottom:
+			width: 2px
+			style: solid
+			color = !lightColor
+			
+		textarea,.multiline-text
+			vertical-align: top
+			font-size: 20px
+			line-height: 30px
+			resize: none
+			word-wrap: break-word
+			white-space: pre-wrap
+		.multiline-hint-text
+			display: none
+		.multiline-text
+			positon: relative
+			top: 0px
+			left: 0px
+			margin: 0px
+			padding: 12px 0px 0px
+			width: auto
+			min-height: 140px !important
+			width: auto
+			color: #393939
+		textarea
+			positon: relative
+			top: 0px
+			left: 0px
+			margin: 0px 0px 12px 0px
+			padding: 0px 0px 4px 0px
+			width: 100%
+			min-height: 140px !important
+	.char-bar
+		position: relative
+		top: -30px
+		vertical-align: bottom
+		text-align: right
+		div
+			vertical-align: bottom
+		#characters-left
+			border: 1px solid rgba(0,0,0,0.1)
+			display: inline-block
+			text-align: center
+			min-width: 32px
+			padding: 3px
+			font-size: 0.8em
+			font-weight: bold
+			background-color: rgba(50,50,50,.1)
+			-webkit-border-radius: 6px
+			&.red
+				color: #B00
+				background-color: rgba(200,50,50,.2)
+		#attached-media
+			height: 24px
+			width: 28px
+			background: url(../images/attached-media.png) bottom center no-repeat
+			display: none
+			&.show
+				display: inline-block
+		#attached-location
+			height: 24px
+			width: 24px
+			background: url(../images/attached-location.png) bottom center no-repeat
+			display: none
+			&.loading
+				display: inline-block
+				background: url(../images/attached-location-loading.gif) center center no-repeat
+			&.show
+				display: inline-block
+	.control-grid-wrapper
+		height: 58px
+	.control-grid
+		background: transparent url(../images/layout/control-grid.png) top left repeat-x
+		position: fixed
+		-webkit-transition-duration: 400ms
+		-webkit-transition-timing-function: ease-in
+		height: 112px
+		bottom: -54px
+		left: 0px
+		right: 0px
+		padding: 0 12px
+		&.open
+			bottom: 0px
+			ul.actions
+				.action.toggle
+					.more
+						display: none
+					.less
+						display: block
+					.toggle-bg
+						-webkit-transform: scale(1.0) rotate(180deg)
+		&.hide
+			bottom: -112px
+		ul.actions
+			list-style: none
+			margin: 6px auto 0px
+			text-align: center
+			color: #C4C4C4
+			text-transform: uppercase
+			padding: 0
+			vertical-align: top
+			li.action
+				margin: 0
+				padding: 0
+				position: relative
+				width: 24%
+				display: inline-block
+				&.selected
+					color: #767676
+				font-size: 11px
+				line-height: 88px
+				height: 50px
+				-webkit-border-radius: 6px
+				overflow: hidden
+				white-space: nowrap
+				text-overflow: ellipsis
+				&.media
+					background: transparent url(../images/control-grid/media.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/media-pushed.png) center center no-repeat
+				&.shrink
+					background: transparent url(../images/control-grid/shrink.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/shrink-pushed.png) center center no-repeat
+				&.links
+					background: transparent url(../images/control-grid/links.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/links-pushed.png) center center no-repeat
+				&.location
+					background: transparent url(../images/control-grid/location.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/location-pushed.png) center center no-repeat
+				&.reply
+					background: transparent url(../images/control-grid/reply.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/reply-pushed.png) center center no-repeat
+				&.retweet
+					background: transparent url(../images/control-grid/retweet.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/retweet-pushed.png) center center no-repeat
+				&.delete
+					display: none
+					background: transparent url(../images/control-grid/delete.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/delete-pushed.png) center center no-repeat
+				&.favorite
+					background: transparent url(../images/control-grid/favorite.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/favorite-pushed.png) center center no-repeat
+				&.message
+					background: transparent url(../images/control-grid/message.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/message-pushed.png) center center no-repeat
+				&.follow
+					background: transparent url(../images/control-grid/follow.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/follow-pushed.png) center center no-repeat
+				&.block
+					background: transparent url(../images/control-grid/block-user.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/block-user-pushed.png) center center no-repeat
+				&.search
+					background: transparent url(../images/control-grid/search.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/search-pushed.png) center center no-repeat
+				&.report
+					background: transparent url(../images/control-grid/report.png) center center no-repeat
+					&.selected
+						background: transparent url(../images/control-grid/report-pushed.png) center center no-repeat		
+				&.toggle
+					.toggle-bg
+						position: absolute
+						top: 0px
+						left: 0px
+						right: 0px
+						bottom: 15px
+						background: url(../images/control-grid/toggle.png) center center no-repeat
+						-webkit-transition-duration: 400ms
+						-webkit-transition-timing-function: ease-in-out
+					.less
+						display: none
+		&.three-grid
+			ul.actions
+				li.action
+					width: 32%
+		&.direct-message
+			ul.actions
+				li.action
+					width: 24%
+					&.retweet
+						display: none
+					&.favorite
+						display: none
+		&.has-delete
+			ul.actions
+				li.action
+					width: 24%
+					&.delete
+						display: inline-block
+		&.following
+			ul.actions
+				li.action
+					&.follow
+						background: transparent url(../images/control-grid/unfollow.png) center center no-repeat
+						&.selected
+							background: transparent url(../images/control-grid/unfollow-pushed.png) center center no-repeat
+	.footer-wrapper
+		height: 52px
+	#twee-footer
+		height: 52px
+		position: fixed
+		bottom: 0px
+		left: 0px
+		right: 0px
+		background: transparent url(../images/navbar/nav-footer.png) bottom left repeat-x
+		z-index: 6000
+		padding: 0 12px
+		
+		#highlighter
+			z-index: 6001
+			position: absolute
+			//background: url(../images/navbar/highlighter.png) center bottom no-repeat
+			border-width: 20px 12px 0
+			-webkit-border-image: url(../images/navbar/highlighter2.png) 0 12 0 12 stretch stretch
+			bottom: -2px
+			width: 10%
+			height: 48px
+			&.ready
+				-webkit-transition-duration: 400ms
+				-webkit-transition-property: left
+		ul.nav
+			list-style: none
+			height: 48px
+			display: block
+			margin: 4px auto 0
+			text-align: center
+			padding: 0
+			vertical-align: top
+			li.nav-item
+				position: relative
+				color: white
+				z-index: 6002
+				width: 16.6%
+				vertical-align: top
+				height: 48px
+				list-style: none
+				margin: 0
+				padding: 0
+				display: inline-block
+				b
+					opacity: 0
+					background: url(../images/navbar/light.png) center bottom no-repeat
+					position: absolute
+					bottom: 0px
+					right: 0px
+					left: 0px
+					height: 20px
+					-webkit-transition-duration: 400ms
+					-webkit-transition-timing-function: ease-out
+				
+				&.timeline
+					background: url(../images/navbar/timeline.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/timeline-highlight.png) center center no-repeat
+					&.light
+						b
+							opacity: 1
+				&.mentions
+					background: url(../images/navbar/mention.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/mention-highlight.png) center center no-repeat
+					&.light
+						b
+							display: block
+				&.messages
+					background: url(../images/navbar/dm.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/dm-highlight.png) center center no-repeat
+					&.light
+						b
+							display: block
+				&.trends
+					background: url(../images/navbar/trends.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/trends-highlight.png) center center no-repeat
+				&.search
+					background: url(../images/navbar/search.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/search-highlight.png) center center no-repeat
+				&.my-account
+					background: url(../images/navbar/my-account.png) center center no-repeat
+					&.highlight
+						background: url(../images/navbar/my-account-highlight.png) center center no-repeat
+	.tweet-list
+		.empty
+			min-height: 56px
+			line-height: 56px
+			font-weight: bold
+			color = !midTextColor
+			text-align: center
+		.tweet
+			min-height: 56px
+			position: relative
+			color = !mainTextColor
+			border-bottom:
+				width: 1px
+				style: solid
+				color = !lightColor
+			background: transparent url('../images/layout/list-item.png') bottom left repeat-x
+			&.current
+				background: #f4f0e4 url('../images/layout/list-item-orange.png') bottom left repeat-x
+			&.reply
+				background: #e3eff2 url('../images/layout/list-item-blue.png') bottom left repeat-x
+			&.selected
+				background-color = !lightColor
+			retweet
+				color = !retweetColor
+			.star
+				vertical-align: top
+				display: none
+				width: 24px
+				height: 16px
+				background: url(../images/star.png) right bottom no-repeat
+			&.favorited
+				.star
+					display: inline-block
+			.profile-image
+				position: absolute
+				top: 4px
+				left: 6px
+			.username
+				color = !altTextColor
+				font-size: 0.8em
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+				padding: 0 100px 0 64px
+				font-weight: bold
+			.created-date
+				font-size: 0.6em
+				color = !thirdTextColor
+				position: absolute
+				right: 6px
+				top: 4px
+				text-align: right
+				vertical-align: top
+			.tweet-text
+				padding-left: 62px
+				font-size: 0.75em
+				padding-right: 10px
+				padding-bottom: 4px
+			.place,.in-reply
+				display: none
+				font-size: 0.6em
+				font-weight: bold
+				padding-left: 64px
+				padding-right: 10px
+				padding-bottom: 4px
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+				color = !midTextColor
+			&.has-place
+				.place
+					display: block
+			&.in-reply-to
+				.in-reply
+					display: block
+		.user
+			min-height: 56px
+			position: relative
+			color = !mainTextColor
+			border-bottom:
+				width: 1px
+				style: solid
+				color = !lightColor
+			background: transparent url('../images/layout/list-item.png') bottom left repeat-x
+			&.selected
+				background-color = !lightColor
+			
+			.verified-icon
+				position: absolute
+				top: 3px
+				right: 3px
+				width: 15px
+				height: 15px
+				background: url(../images/verified.png) center center no-repeat
+				display: none
+			&.verified
+				.verified-icon
+					display: block
+			.profile-image
+				position: absolute
+				top: 4px
+				left: 6px
+			.username
+				color = !altTextColor
+				font-size: 0.9em
+				line-height: 1.2em
+				text-overflow: ellipsis
+				overflow: hidden
+				white-space: nowrap
+				padding: 0 46px 0 64px
+				font-weight: bold
+			.name
+				padding-left: 64px
+				font-size: 0.8em
+				padding-right: 10px
+			.location
+				margin-top: 1px
+				color = !midTextColor
+				padding-left: 64px
+				font-size: 0.8em
+				padding-right: 10px
+	#mentions-view,#messages-view
+		.tweet-list
+			.tweet
+				background: transparent url('../images/layout/list-item.png') bottom left repeat-x
+	.frame-wrapper
+		margin: 5px 8px 20px
+		&.mini
+			margin: 16px 20px 20px
+		background-color: #DFDFDF
+		-webkit-border-radius: 6px
+		border: 1px solid #AAA
+		padding: 0px
+		.input-row
+			position: relative
+			background-color: #DFDFDF
+			height: 40px
+			margin: 6px 4px
+			
+			input,.truncating-text
+				background-color: white
+				padding: 5px
+				margin: 0
+				height: 30px
+				line-height: 30px
+				font-size: 1.2em !important
+				border: none
+				right: 2px
+				left: 2px
+				position: absolute
+				width: auto !important
+				color = !darkAltTextColor
+				-webkit-border-radius: 6px
+				border:
+					width: 1px
+					style: solid
+					color: #AAA
+			input
+				padding: 5px
+			.truncating-text
+				padding-left: 6px
+			.hint-text
+				background-color: transparent
+				color = !midTextColor
+				padding-left: 8px
+			.search-button
+				position: absolute
+				top: 1px
+				right: 2px
+				bottom: 0px
+				width: 40px
+				background: url(../images/search-button.png) center center no-repeat
+		.frame-title
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 0.7em
+			color = !midTextColor
+			margin: 2px 6px
+		.frame-footer
+			text-transform: uppercase
+			font-weight: bold
+			font-size: 0.6em
+			color = !midTextColor
+			margin: -10px 6px 2px
+			text-align: right
+			min-height: 12px
+			
+		.list
+			background-color: #FAFAFA
+			border: 1px solid #C0C0C0
+			border-style: solid none
+			color = !mainTextColor
+			-webkit-border-radius: 3px
+			min-height: 40px
+			&.error
+				color = !retweetColor
+				
+				text-align: center
+				background-image: none !important
+				font-size: 0.8em
+			&.empty
+				color = !midTextColor
+				text-align: center
+				line-height: 40px
+			.list-item.palm-row
+				color = !darkAltTextColor
+				line-height: 40px
+				background: transparent url('../images/layout/list-item.png') bottom left repeat-x
+				position: relative
+				border-top: 1px solid #C0C0C0
+				&:first-child
+					border-top: none
+				.title
+					padding: 5px 10px 0 8px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					.list-selector-value,.label
+						padding-top: 7px
+					.list-selector-triangle
+						margin-top: 15px
+				
+			.trend-item,.url-trend-item,.saved-search-item,.list-list-item
+				background: transparent url('../images/layout/list-item.png') bottom left repeat-x
+				position: relative
+				border-top: 1px solid #C0C0C0
+				&:first-child
+					border-top: none
+				
+				.title
+					padding: 0 30px 0 45px
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+				&.selected
+					background-color = !lightColor
+				.info-icon
+					position: absolute
+					top: 0px
+					bottom: 0px
+					left: 0px
+					width: 40px
+					background: transparent url(../images/layout/info-icon.png) center center no-repeat
+				.arrow
+					position: absolute
+					top: 0px
+					right: 0px
+					bottom: 0px
+					width: 24px
+					background: url(../images/layout/arrow.png) center center no-repeat
+			.saved-search-item
+				.title
+					padding: 8px 30px 8px 15px
+			.trend-item
+				.title
+					line-height: 44px
+			.list-list-item
+				.title
+					padding: 0 30px 0 8px
+					line-height: 44px
+			.url-trend-item
+				padding: 3px 0
+				.thumbnail
+					position: absolute
+					top: 8px
+					left: 6px
+					width: 48px
+					height: 48px
+					max-width: 48px
+					max-height: 48px
+					img
+						background-color = !lightColor
+						width: 48px
+						height: 48px
+						max-width: 48px
+						max-height: 48px
+						-webkit-border-radius: 5px
+						border:
+							width: 1px
+							style: solid
+							color: #AAA
+						box-shadow: 1px 1px 2px #666
+						-webkit-box-shadow: 1px 1px 2px #666
+				.count
+					position: absolute
+					padding: 3px
+					top: 8px
+					right: 6px
+					font-size: 0.6em
+					text-align: center
+					-webkit-border-radius: 4px
+					background-color = !darkAltTextColor
+					color: white
+				.title
+					padding: 2px 60px
+					font-size: 0.8em
+					font-weight: bold
+					white-space: normal
+					min-height: 48px
+				.url
+					padding: 4px 6px
+					font-size: 0.6em
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					color = !darkAltTextColor
+		.action-items
+			-webkit-border-radius: 0 0 8px 8px
+			padding-bottom: 6px
+			.action-group
+				overflow: hidden
+				background-color = !backgroundColor
+				border-top:
+					width: 1px
+					style: solid
+					color = !lightColor
+				&:first-child
+					-webkit-border-radius: 6px 6px 0 0
+				&:last-child
+					border-bottom:
+						width: 1px
+						style: solid
+						color = !lightColor
+			.action-item
+				vertical-align: middle
+				text-align: center
+				padding: 6px 0
+				background: url(../images/layout/list-item.png) bottom left repeat-x
+				position: relative
+				line-height: 1.1em
+				font-size: 0.9em
+				&.selected
+					background-color = !lightColor
+				&.left
+					display: inline-block
+					margin-left: -1px
+					border-right:
+						width: 1px
+						style: solid
+						color = !lightColor
+					width: 50%
+				&.right
+					display: inline-block
+					width: 50%
+				label
+					font-size: 1.1em
+					display: block
+					font-weight: bold
+					color = !darkAltTextColor
+			.full-action-item
+				background: url(../images/layout/list-item.png) bottom left repeat-x
+				background-color = !backgroundColor
+				position: relative
+				border-bottom:
+					width: 1px
+					style: solid
+					color = !lightColor
+				&:first-child:
+					border-top:
+						width: 1px
+						style: solid
+						color = !lightColor
+				&.selected
+					background-color = !lightColor
+				.title
+					font-weight: 1.1em
+					line-height: 44px
+					padding: 0 24px 0 8px
+				.arrow
+					position: absolute
+					top: 0px
+					right: 0px
+					bottom: 0px
+					width: 24px
+					background: url(../images/layout/arrow.png) center center no-repeat
+	#user-following
+		background: url(../images/layout/list-item.png) bottom left repeat-x
+		background-color = !backgroundColor
+		text-align: center
+		margin: 15px 20px
+		border: 1px solid #AAA
+		-webkit-border-radius: 6px
+		padding: 10px
+		font-weight: bold
+		font-size: 0.8em
+		color = !midTextColor
+		&.selected
+			background-color = !lightColor
+	.user-header
+		position: relative
+		margin-top: -50px
+		padding: 50px 0 10px
+		background: url(../images/layout/list-item.png) bottom left repeat-x
+		background-color = !backgroundColor
+		&.selected
+			background-color = !lightColor
+		border-bottom:
+			width: 1px
+			style: solid
+			color = !lightColor
+		.profile-image
+			position: absolute
+			top: 56px
+			left: 8px
+		.username
+			margin: 4px 24px 0 64px
+			line-height: 1.4em
+			font-size: 1.2em
+			font-weight: bold
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+		.name
+			margin: -3px 24px 0 66px
+			line-height: 1.4em
+			min-height: 1.4em
+			color = !darkAltTextColor
+			text-overflow: ellipsis
+			overflow: hidden
+			white-space: nowrap
+		.meta
+			margin-top: 5px
+		.url,.location,.description
+			display: none
+			position: relative
+			font-size: 0.8em
+			padding: 4px 0
+			label
+				color = !midTextColor
+				position: absolute
+				top: 0px
+				left: 0px
+				display: block
+				width: 75px
+				text-align: right
+				font-weight: bold
+				padding: 4px 6px 4px 0
+			span
+				display: block
+				overflow: hidden
+				text-overflow: ellipsis
+				white-space: nowrap
+				padding: 0 12px 0 82px
+		.description
+			span
+				overflow: auto
+				white-space: normal
+		&.has-url
+			.url
+				display: block
+		&.has-location
+			.location
+				display: block
+		&.has-description
+			.description
+				display: block
+			
+		.arrow
+			position: absolute
+			top: 46px
+			right: 0px
+			bottom: 0px
+			width: 24px
+			background: url(../images/layout/arrow.png) center center no-repeat
+	#user-more
+		&.loading
+			text-align: center
+			margin: 30px auto
+			background: url('../images/layout/load-more-loading.gif') center center no-repeat
+			background-color = !backgroundColor
+			width: 40px
+			height: 40px
+			-webkit-border-radius: 4px
+		
+	.tweet-content
+		margin: 10px
+		position: relative
+		.place
+			display: none
+		&.has-place
+			.place
+				display: block
+		.star
+			position: absolute
+			top: -8px
+			right: -8px
+			display: none
+			width: 16px
+			height: 16px
+			background: url(../images/star.png) center center no-repeat
+		&.favorited
+			.star
+				display: block
+		.tweet-text
+			margin-bottom: 10px
+			color = !mainTextColor
+			font-size: 1em
+			line-height: 1.4em
+			
+			mention,url,hash
+				font-weight: bold
+				font-size: 1.1em
+				color = !darkAltTextColor
+		.meta
+			font-size: 0.8em
+			color = !midTextColor
+			.align-right
+				text-align: right
+			.in-reply
+				display: none
+				margin: 2px 0px 8px
+				background-color = !darkAltTextColor
+				border: none
+				padding: 5px 10px
+				color: #F0F0F0
+				-webkit-border-radius: 10px
+				font-weight: bold
+				font-size: 0.75em
+				&.selected
+					background-color = !thirdTextColor
+		&.direct-message
+			.source
+				display: none
+		&.in-reply-to
+			.meta
+				.in-reply
+					display: inline-block
+	#extra-area
+		margin-bottom: 10px
+	.place-wrapper,.thumbnail-wrapper
+		margin: 10px 0
+		text-align: center
+		img
+			-webkit-border-radius: 6px
+			border:
+				width: 1px
+				style: solid
+				color = !midTextColor
+	#next-tweet,#previous-tweet
+		background: url('../images/layout/up-down.png') center center no-repeat
+		width: 50px
+		height: 44px
+		top: 0px
+		right: 0px
+		z-index: 6001
+		position: fixed
+		&.selected
+			background-image: url('../images/layout/up-down-pushed.png')
+	#previous-tweet
+		right: 50px
+		background-position: 10px center
+	#next-tweet
+		background-position: -40px center
+	.palm-button.tweeButton
+		-webkit-border-image: url(../images/twee-button.png) 0 17 104 17 repeat repeat
+		&.selected
+			-webkit-border-image: url(../images/twee-button.png) 52 17 52 17 repeat repeat
+		&.disabled
+			-webkit-border-image: url(../images/twee-button.png) 104 17 0 17 repeat repeat
+	.what-the-trend
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -90px
+		height: 180px
+		width: 280px
+		margin-left: -140px
+		background-color: rgba(0,0,0,0.85)
+		-webkit-border-radius: 6px
+		border: 1px solid rgba(0,0,0,0.5)
+		.title
+			font-size: 1.1em
+			line-height: 1.25em
+			padding: 2px 4px
+			font-weight: bold
+			color = !darkAltTextColor
+		.description
+			font-size: 0.8em
+			padding: 2px 6px 30px 6px
+			overflow: hidden
+			text-overflow: ellipsis
+			color = !lightColor
+		.footer
+			color: #777
+			position: absolute
+			right: 0px
+			left: 0px
+			bottom: 0px
+			font-size: 0.65em
+			text-align: right
+			font-weight: bold
+			padding: 3px 4px 4px
+
+body.palm-default
+	background-color = !backgroundColor
+	color = !mainTextColor
+body.palm-default
+	.alt-bg
+		background: url(../images/layout/alt-bg.png) top left repeat
+		
+	small
+		color = !midTextColor
+	.twee-header
+		background: url(../images/layout/twee-header.png) top left repeat-x
+		color = !headerTextColor
+	#add-account
+		background: url(../images/layout/add-button.png) center center no-repeat
+	#add-account:active
+		background: url(../images/layout/add-button-pushed.png) center center no-repeat
+	.list
+		position: relative
+		.list-item
+			-webkit-border-radius: 4px 4px 0 0
+			position: relative
+			background: url(../images/layout/list-item.png) bottom left repeat-x
+			background-color = !backgroundColor
+			border-bottom:
+				width: 1px
+				style: solid
+				color = !lightColor
+			&.selected
+				background-color = !lightColor

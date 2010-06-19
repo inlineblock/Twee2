@@ -1,0 +1,15 @@
+{
+	"id": "com.deliciousmorsel.twee",
+	"version": "1.9.9",
+	"company": "Delicious Morsel LLC",
+	"vendor": "Delicious Morsel",
+	"copyright": "2010 - Delicious Morsel LLC",
+	"type": "web",
+	"main": "index.html",
+	"title": "Twee",
+	"icon": "icon.png",
+	"noWindow": "true",
+	"clientID": "10279",
+	"BitlyApiKey": "R_e20959b1c69efb4f401b5cc84d2d411b",
+	"BitlyApiLogin": "deliciousmorsel"
+}

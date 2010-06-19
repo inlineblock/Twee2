@@ -1,0 +1,18 @@
+<div class="user-header" x-mojo-tap-highlight="momentary">
+	<div class="profile-image"><img src="#{user.profileImage}" class="user-profile-image" /></div>
+	<div class="username">@#{user.username}</div>
+	<div class="name">#{user.name}</div>
+	<div class="arrow"></div>
+</div>
+<div class="tweet-content #{cssClass}">
+	<div class="star"></div>
+	<div class="tweet-text">#{text}</div>
+	<div class="meta">
+		<div class="place">from #{placeFullName}</div>
+		<div class="full-date">#{fullDate}</div>
+		<div class="source">via #{source}</div>
+		<div class="align-right">
+			<div class="in-reply" x-mojo-tap-highlight="momentary">in reply to @#{replyToUserName}</div>
+		</div>
+	</div>
+</div>
