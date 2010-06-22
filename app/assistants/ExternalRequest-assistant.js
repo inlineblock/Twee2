@@ -33,8 +33,9 @@ ExternalRequestAssistant = Class.create(Twee.Base , {
 	activate: function(o)
 	{
 		o = o || {};
-		if (o.refreshTimeline)
+		if (o.refreshTimeline) // this means the NewTweet screen popped, told us to refresh, which only happens when the tweet was sent successfully
 		{
+			this.showBanner("Tweet sent successfully!");
 			this.close();
 		}
 	},

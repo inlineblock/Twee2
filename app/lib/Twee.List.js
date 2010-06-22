@@ -315,6 +315,12 @@ Twee.List = Class.create({
 		}
 	},
 	
+	clearTweets: function()
+	{
+		this.tweets = [];
+		this.list.innerHTML = "";
+	},
+	
 	storeTweets: function()
 	{
 		this.account.storeTweets(this.element.id , this.tweets);

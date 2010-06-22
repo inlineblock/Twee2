@@ -14,7 +14,6 @@ Twee.SearchList = Class.create(Twee.List , {
 	{
 		if (this.location)
 		{
-			//"latitude,longitude,radius";
 			return this.location.latitude + "," + this.location.longitude + "," + this.location.radius;
 		}
 		return false;
