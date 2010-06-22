@@ -5,8 +5,8 @@ Twee.AccountServicesScrubbers = {
 		var params = {}, xCheck = ['status' , 'long' , 'lat' , 'display_coordinates' , 'in_reply_to_status_id'];
 		if (o.location)
 		{
-			o.long = o.location.longitude;
 			o.lat = o.location.latitude;
+			o['long'] = o.location.longitude; // "long" is a reserved js word, so it doesn't like o.long
 		}
 		if (o.reply)
 		{

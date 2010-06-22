@@ -94,7 +94,7 @@ Twee.Account = Class.create({
 		try
 		{
 			data.each(function(d) {
-				tweets.push(new Twee.Tweet(this).import(d));
+				tweets.push((new Twee.Tweet(this)).handleImport(d));
 			} , this);
 		}
 		catch(e)

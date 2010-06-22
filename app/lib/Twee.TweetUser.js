@@ -95,7 +95,7 @@ Twee.TweetUser = Class.create({
 		}
 	},
 	
-	import: function(data)
+	handleImport: function(data)
 	{
 		for(var i in data) if (data.hasOwnProperty(i))
 		{
@@ -117,5 +117,5 @@ Twee.TweetUser = Class.create({
 
 Twee.TweetUser.fromStorable = function(data)
 {
-	return new Twee.TweetUser().import(data);
+	return new Twee.TweetUser().handleImport(data);
 };
