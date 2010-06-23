@@ -26,6 +26,7 @@ MainAssistant = Class.create(Twee.Base , {
 		this.views = {};
 		this.account = this.options.account;
 		$super();
+		this.applyFontSize();
 		this.setupView();
 		this.get('write-icon').observe(Mojo.Event.tap , this.writeIconClick);
 		

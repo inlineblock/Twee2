@@ -9,6 +9,7 @@ ManageAccountsAssistant = Class.create(Twee.Base , {
 	setup: function($super)
 	{
 		$super();
+		this.applyFontSize();
 		this.userAccounts = this.get('user-accounts');
 		this.addAccount = this.get('add-account');
 	
