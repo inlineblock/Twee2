@@ -19,14 +19,15 @@ Twee.TweetUser = Class.create({
 	],
 	initialize: function()
 	{
+	
 	},
 	
 	loadFromAjax: function(raw)
 	{
 		this.username = raw.screen_name;
 		this.name = raw.name;
-		this.user_id = raw.id;
-		this.id = raw.id;
+		this.user_id = raw.id_str || (raw.id + "");
+		this.id = this.user_id;
 		this.profileImage = raw.profile_image_url;
 		
 		if (this.profileImage.substr(this.profileImage.length - 28, 16) == "default_profile_")

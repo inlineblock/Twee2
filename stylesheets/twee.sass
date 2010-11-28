@@ -1,13 +1,13 @@
-!mainTextColor = #262626
-!altTextColor = #060606
-!thirdTextColor = #82bdff
-!darkAltTextColor = #467391
-!lightColor = #D9D9D9
-!midTextColor = #A0A0A0
+$mainTextColor: #262626
+$altTextColor: #060606
+$thirdTextColor: #82bdff
+$darkAltTextColor: #467391
+$lightColor: #D9D9D9
+$midTextColor: #A0A0A0
 
-!backgroundColor = #FAFAFA
-!headerTextColor = #FAFAFA
-!retweetColor = #DF6F74
+$backgroundColor: #FAFAFA
+$headerTextColor: #FAFAFA
+$retweetColor: #DF6F74
 
 body
 	font-size: 18px
@@ -222,7 +222,7 @@ body
 		margin-bottom: 10px
 	.profile-image
 		img
-			background-color = !lightColor
+			background-color: $lightColor
 			width: 48px
 			height: 48px
 			max-width: 48px
@@ -231,7 +231,7 @@ body
 			border:
 				width: 1px
 				style: solid
-				color = !lightColor
+				color: $lightColor
 			box-shadow: 1px 1px 2px #666
 			-webkit-box-shadow: 1px 1px 2px #666
 	.account-list
@@ -257,14 +257,14 @@ body
 		border:
 			width: 2px
 			style: solid
-			color = !lightColor
+			color: $lightColor
 		background-color: #FFF
 		.input-row
 			position: relative
 			border-top:
 				width: 1px
 				style: solid
-				color = !lightColor
+				color: $lightColor
 			height: 40px
 			&:first-child
 				border-top: none
@@ -281,7 +281,7 @@ body
 				left: 2px
 				position: absolute
 				width: auto !important
-				color = !darkAltTextColor
+				color: $darkAltTextColor
 			.truncating-text
 				margin-left: 1px
 			.hint-text
@@ -298,11 +298,11 @@ body
 		padding: 0 10px 10px 10px
 		margin: 0px
 		background: url(../images/layout/list-item.png) bottom left repeat-x
-		background-color = !backgroundColor
+		background-color: $backgroundColor
 		border-bottom:
 			width: 2px
 			style: solid
-			color = !lightColor
+			color: $lightColor
 			
 		textarea,.multiline-text
 			vertical-align: top
@@ -597,25 +597,25 @@ body
 			min-height: 56px
 			line-height: 56px
 			font-weight: bold
-			color = !midTextColor
+			color: $midTextColor
 			text-align: center
 		.tweet
 			min-height: 56px
 			position: relative
-			color = !mainTextColor
+			color: $mainTextColor
 			border-bottom:
 				width: 1px
 				style: solid
-				color = !lightColor
+				color: $lightColor
 			background: transparent url('../images/layout/list-item.png') bottom left repeat-x
 			&.current
 				background: #f4f0e4 url('../images/layout/list-item-orange.png') bottom left repeat-x
 			&.reply
 				background: #e3eff2 url('../images/layout/list-item-blue.png') bottom left repeat-x
 			&.selected
-				background-color = !lightColor
+				background-color: $lightColor
 			retweet
-				color = !retweetColor
+				color: $retweetColor
 			.star
 				vertical-align: top
 				display: none
@@ -630,7 +630,7 @@ body
 				top: 4px
 				left: 6px
 			.username
-				color = !altTextColor
+				color: $altTextColor
 				font-size: 0.8em
 				text-overflow: ellipsis
 				overflow: hidden
@@ -639,7 +639,7 @@ body
 				font-weight: bold
 			.created-date
 				font-size: 0.6em
-				color = !thirdTextColor
+				color: $thirdTextColor
 				position: absolute
 				right: 6px
 				top: 4px
@@ -660,7 +660,7 @@ body
 				text-overflow: ellipsis
 				overflow: hidden
 				white-space: nowrap
-				color = !midTextColor
+				color: $midTextColor
 			&.has-place
 				.place
 					display: block
@@ -670,14 +670,14 @@ body
 		.user
 			min-height: 56px
 			position: relative
-			color = !mainTextColor
+			color: $mainTextColor
 			border-bottom:
 				width: 1px
 				style: solid
-				color = !lightColor
+				color: $lightColor
 			background: transparent url('../images/layout/list-item.png') bottom left repeat-x
 			&.selected
-				background-color = !lightColor
+				background-color: $lightColor
 			
 			.verified-icon
 				position: absolute
@@ -695,7 +695,7 @@ body
 				top: 4px
 				left: 6px
 			.username
-				color = !altTextColor
+				color: $altTextColor
 				font-size: 0.9em
 				line-height: 1.2em
 				text-overflow: ellipsis
@@ -709,7 +709,7 @@ body
 				padding-right: 10px
 			.location
 				margin-top: 1px
-				color = !midTextColor
+				color: $midTextColor
 				padding-left: 64px
 				font-size: 0.8em
 				padding-right: 10px
@@ -743,7 +743,7 @@ body
 				left: 2px
 				position: absolute
 				width: auto !important
-				color = !darkAltTextColor
+				color: $darkAltTextColor
 				-webkit-border-radius: 6px
 				border:
 					width: 1px
@@ -755,7 +755,7 @@ body
 				padding-left: 6px
 			.hint-text
 				background-color: transparent
-				color = !midTextColor
+				color: $midTextColor
 				padding-left: 8px
 			.search-button
 				position: absolute
@@ -768,13 +768,13 @@ body
 			text-transform: uppercase
 			font-weight: bold
 			font-size: 0.7em
-			color = !midTextColor
+			color: $midTextColor
 			margin: 2px 6px
 		.frame-footer
 			text-transform: uppercase
 			font-weight: bold
 			font-size: 0.6em
-			color = !midTextColor
+			color: $midTextColor
 			margin: -10px 6px 2px
 			text-align: right
 			min-height: 12px
@@ -783,21 +783,21 @@ body
 			background-color: #FAFAFA
 			border: 1px solid #C0C0C0
 			border-style: solid none
-			color = !mainTextColor
+			color: $mainTextColor
 			-webkit-border-radius: 3px
 			min-height: 40px
 			&.error
-				color = !retweetColor
+				color: $retweetColor
 				
 				text-align: center
 				background-image: none !important
 				font-size: 0.8em
 			&.empty
-				color = !midTextColor
+				color: $midTextColor
 				text-align: center
 				line-height: 40px
 			.list-item.palm-row
-				color = !darkAltTextColor
+				color: $darkAltTextColor
 				line-height: 40px
 				background: transparent url('../images/layout/list-item.png') bottom left repeat-x
 				position: relative
@@ -827,7 +827,7 @@ body
 					overflow: hidden
 					text-overflow: ellipsis
 				&.selected
-					background-color = !lightColor
+					background-color: $lightColor
 				.info-icon
 					position: absolute
 					top: 0px
@@ -863,7 +863,7 @@ body
 					max-width: 48px
 					max-height: 48px
 					img
-						background-color = !lightColor
+						background-color: $lightColor
 						width: 48px
 						height: 48px
 						max-width: 48px
@@ -883,7 +883,7 @@ body
 					font-size: 0.6em
 					text-align: center
 					-webkit-border-radius: 4px
-					background-color = !darkAltTextColor
+					background-color: $darkAltTextColor
 					color: white
 				.title
 					padding: 2px 60px
@@ -897,24 +897,24 @@ body
 					white-space: nowrap
 					overflow: hidden
 					text-overflow: ellipsis
-					color = !darkAltTextColor
+					color: $darkAltTextColor
 		.action-items
 			-webkit-border-radius: 0 0 8px 8px
 			padding-bottom: 6px
 			.action-group
 				overflow: hidden
-				background-color = !backgroundColor
+				background-color: $backgroundColor
 				border-top:
 					width: 1px
 					style: solid
-					color = !lightColor
+					color: $lightColor
 				&:first-child
 					-webkit-border-radius: 6px 6px 0 0
 				&:last-child
 					border-bottom:
 						width: 1px
 						style: solid
-						color = !lightColor
+						color: $lightColor
 			.action-item
 				vertical-align: middle
 				text-align: center
@@ -924,14 +924,14 @@ body
 				line-height: 1.1em
 				font-size: 0.9em
 				&.selected
-					background-color = !lightColor
+					background-color: $lightColor
 				&.left
 					display: inline-block
 					margin-left: -1px
 					border-right:
 						width: 1px
 						style: solid
-						color = !lightColor
+						color: $lightColor
 					width: 50%
 				&.right
 					display: inline-block
@@ -940,22 +940,22 @@ body
 					font-size: 1.1em
 					display: block
 					font-weight: bold
-					color = !darkAltTextColor
+					color: $darkAltTextColor
 			.full-action-item
 				background: url(../images/layout/list-item.png) bottom left repeat-x
-				background-color = !backgroundColor
+				background-color: $backgroundColor
 				position: relative
 				border-bottom:
 					width: 1px
 					style: solid
-					color = !lightColor
-				&:first-child:
+					color: $lightColor
+				&:first-childv
 					border-top:
 						width: 1px
 						style: solid
-						color = !lightColor
+						color: $lightColor
 				&.selected
-					background-color = !lightColor
+					background-color: $lightColor
 				.title
 					font-weight: 1.1em
 					line-height: 44px
@@ -969,7 +969,7 @@ body
 					background: url(../images/layout/arrow.png) center center no-repeat
 	#user-following
 		background: url(../images/layout/list-item.png) bottom left repeat-x
-		background-color = !backgroundColor
+		background-color: $backgroundColor
 		text-align: center
 		margin: 15px 20px
 		border: 1px solid #AAA
@@ -977,9 +977,9 @@ body
 		padding: 10px
 		font-weight: bold
 		font-size: 0.8em
-		color = !midTextColor
+		color: $midTextColor
 		&.selected
-			background-color = !lightColor
+			background-color: $lightColor
 	#info-area
 		position: relative
 		margin-top: -50px
@@ -987,25 +987,25 @@ body
 		min-height: 40px
 		padding: 55px 20px 10px
 		background: url(../images/layout/list-item.png) bottom left repeat-x
-		background-color = !backgroundColor
-		color = !darkAltTextColor
+		background-color: $backgroundColor
+		color: $darkAltTextColor
 		font-weight: bold
 		border-bottom:
 			width: 1px
 			style: solid
-			color = !lightColor
+			color: $lightColor
 	.user-header
 		position: relative
 		margin-top: -50px
 		padding: 50px 0 10px
 		background: url(../images/layout/list-item.png) bottom left repeat-x
-		background-color = !backgroundColor
+		background-color: $backgroundColor
 		&.selected
-			background-color = !lightColor
+			background-color: $lightColor
 		border-bottom:
 			width: 1px
 			style: solid
-			color = !lightColor
+			color: $lightColor
 		.profile-image
 			position: absolute
 			top: 56px
@@ -1022,7 +1022,7 @@ body
 			margin: -3px 24px 0 66px
 			line-height: 1.4em
 			min-height: 1.4em
-			color = !darkAltTextColor
+			color: $darkAltTextColor
 			text-overflow: ellipsis
 			overflow: hidden
 			white-space: nowrap
@@ -1034,7 +1034,7 @@ body
 			font-size: 0.8em
 			padding: 4px 0
 			label
-				color = !midTextColor
+				color: $midTextColor
 				position: absolute
 				top: 0px
 				left: 0px
@@ -1075,7 +1075,7 @@ body
 			text-align: center
 			margin: 30px auto
 			background: url('../images/layout/load-more-loading.gif') center center no-repeat
-			background-color = !backgroundColor
+			background-color: $backgroundColor
 			width: 40px
 			height: 40px
 			-webkit-border-radius: 4px
@@ -1101,23 +1101,23 @@ body
 				display: block
 		.tweet-text
 			margin-bottom: 10px
-			color = !mainTextColor
+			color: $mainTextColor
 			font-size: 1em
 			line-height: 1.4em
 			
 			mention,url,hash
 				font-weight: bold
 				font-size: 1.1em
-				color = !darkAltTextColor
+				color: $darkAltTextColor
 		.meta
 			font-size: 0.8em
-			color = !midTextColor
+			color: $midTextColor
 			.align-right
 				text-align: right
 			.in-reply
 				display: none
 				margin: 2px 0px 8px
-				background-color = !darkAltTextColor
+				background-color: $darkAltTextColor
 				border: none
 				padding: 5px 10px
 				color: #F0F0F0
@@ -1125,7 +1125,7 @@ body
 				font-weight: bold
 				font-size: 0.75em
 				&.selected
-					background-color = !thirdTextColor
+					background-color: $thirdTextColor
 		&.direct-message
 			.source
 				display: none
@@ -1143,7 +1143,7 @@ body
 			border:
 				width: 1px
 				style: solid
-				color = !midTextColor
+				color: $midTextColor
 	#next-tweet,#previous-tweet
 		background: url('../images/layout/up-down.png') center center no-repeat
 		width: 50px
@@ -1181,13 +1181,13 @@ body
 			line-height: 1.25em
 			padding: 2px 4px
 			font-weight: bold
-			color = !darkAltTextColor
+			color: $darkAltTextColor
 		.description
 			font-size: 0.8em
 			padding: 2px 6px 30px 6px
 			overflow: hidden
 			text-overflow: ellipsis
-			color = !lightColor
+			color: $lightColor
 		.footer
 			color: #777
 			position: absolute
@@ -1207,31 +1207,31 @@ body
 			margin: 8px 24px 10px
 			-webkit-border-radius: 10px
 			background: url(../images/layout/list-item.png) bottom left repeat-x
-			background-color = !backgroundColor
+			background-color: $backgroundColor
 			border:
 				width: 1px
 				style: solid
 				color: #AAA
 		&.selected
 			.nearby-row
-				background-color = !lightColor
+				background-color: $lightColor
 				
 	.has-nearby-location
 		.nearby-wrapper
 			height: 68px
 
 body.palm-default
-	background-color = !backgroundColor
-	color = !mainTextColor
+	background-color: $backgroundColor
+	color: $mainTextColor
 body.palm-default
 	.alt-bg
 		background: url(../images/layout/alt-bg.png) top left repeat
 		
 	small
-		color = !midTextColor
+		color: $midTextColor
 	.twee-header
 		background: url(../images/layout/twee-header.png) top left repeat-x
-		color = !headerTextColor
+		color: $headerTextColor
 	#add-account
 		background: url(../images/layout/add-button.png) center center no-repeat
 	#add-account:active
@@ -1242,10 +1242,10 @@ body.palm-default
 			-webkit-border-radius: 4px 4px 0 0
 			position: relative
 			background: url(../images/layout/list-item.png) bottom left repeat-x
-			background-color = !backgroundColor
+			background-color: $backgroundColor
 			border-bottom:
 				width: 1px
 				style: solid
-				color = !lightColor
+				color: $lightColor
 			&.selected
-				background-color = !lightColor
+				background-color: $lightColor

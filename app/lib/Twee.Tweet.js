@@ -22,7 +22,7 @@ Twee.Tweet = Class.create({
 	
 	loadFromAjax: function(raw)
 	{
-		this.id = raw.id + "";
+		this.id = raw.id_str || (raw.id + "");
 		this.favorited = raw.favorited;
 		this.source = (raw.source && raw.source.stripTags ? raw.source.unescapeHTML().stripTags() : false);
 		this.place = raw.place;
