@@ -1,7 +1,6 @@
 (function(){
 
 var Date = this.Date;
-
 Date.Methods = {
 	ms: 'Milliseconds',
 	year: 'FullYear',
@@ -16,24 +15,21 @@ Date.Methods = {
 'AMPM', 'Ordinal', 'UTCHours', 'UTCMilliseconds', 'UTCMinutes', 'UTCMonth', 'UTCSeconds'].each(function(method){
 Date.Methods[method.toLowerCase()] = method;
 });
-
-var pad = function(what, length){
+var pad = function(what, length) {
 	return new Array(length - String(what).length + 1).join('0') + what;
-};
-
-var implements = {
-
-	set: function(prop, value){
-	switch ($type(prop)){
-	case 'object':
-	for (var p in prop) this.set(p, prop[p]);
-	break;
-	case 'string':
-	prop = prop.toLowerCase();
-	var m = Date.Methods;
-	if (m[prop]) this['set' + m[prop]](value);
-	}
-	return this;
+},
+toimplements = { set: function(prop, value){
+		switch ($type(prop))
+		{
+			case 'object':
+				for (var p in prop) this.set(p, prop[p]);
+			break;
+			case 'string':
+				prop = prop.toLowerCase();
+				var m = Date.Methods;
+				if (m[prop]) this['set' + m[prop]](value);
+		}
+		return this;
 	},
 	
 	get: function(prop){
@@ -87,8 +83,8 @@ var implements = {
 	return ((date - this) / Date.units[resolution || 'day'](3, 3)).toInt(); // non-leap year, 30-day month
 	},
 	
-	getLastDayOfMonth: function(){
-	return Date.daysInMonth(this.get('mo'), this.get('year'));
+	getLastDayOfMonth: function() {
+		return Date.daysInMonth(this.get('mo'), this.get('year'));
 	},
 	
 	getDayOfYear: function(){
@@ -96,8 +92,8 @@ var implements = {
 	- Date.UTC(this.get('year'), 0, 1)) / Date.units.day();
 	},
 	
-	getWeek: function(){
-	return (this.get('dayofyear') / 7).ceil();
+	getWeek: function() {
+		return (this.get('dayofyear') / 7).ceil();
 	},
 	
 	getOrdinal: function(day){
@@ -177,9 +173,9 @@ var implements = {
 	}
 
 };
-for (var i in implements) if (implements.hasOwnProperty(i))
+for (var i in toimplements) if (toimplements.hasOwnProperty(i))
 {
-	Date.prototype[i] = implements[i];
+	Date.prototype[i] = toimplements[i];
 }
 
 Date.prototype.compare = Date.prototype.diff;

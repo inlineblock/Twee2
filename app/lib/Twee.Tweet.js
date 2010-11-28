@@ -261,15 +261,15 @@ Twee.Tweet = Class.create({
 			
 			if (this.place.bounding_box && this.place.bounding_box.coordinates && Object.isArray(this.place.bounding_box.coordinates) && Object.isArray(this.place.bounding_box.coordinates[0]))
 			{
-				var coords = {lat: 0 , long: 0};
+				var coords = {lat: 0 , 'long': 0};
 				this.place.bounding_box.coordinates[0].each(function(co) {
 					coords.lat += co[0];
-					coords.long += co[1];
+					coords['long'] += co[1];
 				});
 				
 				coords.lat = coords.lat / this.place.bounding_box.coordinates[0].length;
-				coords.long = coords.long / this.place.bounding_box.coordinates[0].length;
-				return coords.long + "," + coords.lat;
+				coords['long'] = coords['long'] / this.place.bounding_box.coordinates[0].length;
+				return coords['long'] + "," + coords.lat;
 			}
 			else
 			{
@@ -288,7 +288,7 @@ Twee.Tweet = Class.create({
 		return store;
 	},
 	
-	import: function(data)
+	handleImport: function(data)
 	{
 		for(var i in data) if (data.hasOwnProperty(i))
 		{
