@@ -50,3 +50,51 @@ String.prototype.localize = function()
 {
 	return $L(this);
 }
+
+String.prototype.compare = function(string)
+{
+	if (this == string)
+	{
+		return 0;
+	}
+	
+	if (this.length != string.length)
+	{
+		if (this.length > string.length)
+		{
+			return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	}
+	
+	var i=0 , strlen = this.length, mine = false , theirs = false;
+	while(i < strlen)
+	{
+		mine = this.substr(i,1);
+		theirs = string.substr(i,1);
+		if (mine != theirs)
+		{
+			if (parseInt(mine) > parseInt(theirs))
+			{
+				return 1;
+			}
+			else
+			{
+				return -1;
+			}
+		}
+		i++;
+	}
+	return 0;
+};
+String.prototype.isGreaterThan = function(string)
+{
+	return (this.compare(string) === 1);
+};
+String.prototype.isLessThan = function(string)
+{
+	return (this.compare(string) === -1);
+}

@@ -193,14 +193,14 @@ Twee.List = Class.create({
 				return this.tweets.push(tweet);
 			}
 			
-			var nid = parseInt(tweet.id),
-				fid = parseInt(this.tweets[0].id),
-				lid = parseInt(this.tweets[this.tweets.length-1].id);
-			if (nid > fid)
+			var nid = tweet.id,
+				fid = this.tweets[0].id,
+				lid = this.tweets[this.tweets.length-1].id;
+			if (nid.isGreaterThan(fid))
 			{
 				this.tweets.unshift(tweet);
 			}
-			else if (lid > nid)
+			else if (lid.isGreaterThan(nid))
 			{
 				this.tweets.push(tweet);
 			}
