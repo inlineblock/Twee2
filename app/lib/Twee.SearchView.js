@@ -20,7 +20,12 @@ Twee.SearchView = Class.create({
 	setup: function(id)
 	{
 		this.element = this.controller.get(id);
-		
+		this.element.widget = this;
+		return this;
+	},
+	
+	doSetup: function()
+	{
 		this.searchModel = {value: ""};
 		this.controller.controller.setupWidget('searchTerms' , {hintText: "Search Terms" , multiline: false, focus: false , textCase: Mojo.Widget.steModeLowerCase , changeOnKeyPress: true , requiresEnterKey: true} , this.searchModel);
 		
@@ -33,8 +38,6 @@ Twee.SearchView = Class.create({
 		{
 			this.refreshIcon.observe(Mojo.Event.tap , this.refreshIconClick);
 		}
-		
-		
 		this.searchButton = this.controller.get('search-button');
 		this.searchButton.observe(Mojo.Event.tap , this.searchButtonClick);
 		
@@ -51,11 +54,11 @@ Twee.SearchView = Class.create({
 		this.savedSearchesList.observe(Mojo.Event.tap , this.savedSearchesListClick);
 		this.savedSearchesListFooter = this.element.down('.saved-searches-list-footer');
 		
-		this.element.widget = this;
+		this.controller.controller.instantiateChildWidgets(this.element);
 		return this;
 	},
 	
-	cleanup: function(id)
+	doCleanup: function(id)
 	{
 		if (this.refreshIcon)
 		{
@@ -66,6 +69,25 @@ Twee.SearchView = Class.create({
 		this.savedSearchesList.stopObserving(Mojo.Event.tap , this.savedSearchesListClick);
 		this.searchUsers.stopObserving(Mojo.Event.propertyChange , this.searchUsersType);
 		this.userSearchButton.stopObserving(Mojo.Event.tap , this.userSearchButtonClick);
+		
+	},
+	
+	cleanup: function()
+	{
+		if (this.hasBeenSetup)
+		{
+			this.doCleanup();
+			this.hasBeenSetup = false;
+		}
+	},
+	
+	aboutToActivate: function()
+	{
+		if (!this.hasBeenSetup)
+		{
+			this.doSetup();
+			this.hasBeenSetup = true;
+		}
 		
 	},
 	

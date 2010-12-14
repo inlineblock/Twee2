@@ -30,6 +30,13 @@ Twee.TrendView = Class.create({
 	setup: function(id)
 	{
 		this.element = this.controller.get(id);
+		this.element.widget = this;
+		return this;
+	},
+	
+	doSetup: function(id)
+	{
+	//	this.element = this.controller.get(id);
 		this.refreshIcon = this.element.down('.refresh-icon');
 		this.refreshIcon.observe(Mojo.Event.tap , this.refreshIconClick);
 		
@@ -40,15 +47,25 @@ Twee.TrendView = Class.create({
 		this.trendList.observe(Mojo.Event.tap , this.trendListClick);
 		this.urlTrendList.observe(Mojo.Event.tap , this.urlTrendListClick);
 		
-		this.element.widget = this;
+	//	this.element.widget = this;
 		return this;
 	},
 	
-	cleanup: function()
+	doCleanup: function()
 	{
 		this.refreshIcon.stopObserving(Mojo.Event.tap , this.refreshIconClick);
 		this.trendList.stopObserving(Mojo.Event.tap , this.trendListClick);
 		this.urlTrendList.stopObserving(Mojo.Event.tap , this.urlTrendListClick);
+	},
+	
+	cleanup: function()
+	{
+		
+		if (this.hasBeenSetup)
+		{
+			this.doCleanup();
+			this.hasBeenSetup = false;
+		}
 	},
 	
 	activate: function()
@@ -63,6 +80,15 @@ Twee.TrendView = Class.create({
 	aboutToDeactivate: function()
 	{
 		this.setOptions();
+	},
+	
+	aboutToActivate: function()
+	{
+		if (!this.hasBeenSetup)
+		{
+			this.doSetup();
+			this.hasBeenSetup = true;
+		}	
 	},
 	
 	refreshLists: function()

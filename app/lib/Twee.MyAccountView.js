@@ -18,6 +18,13 @@ Twee.MyAccountView = Class.create({
 	setup: function(id)
 	{
 		this.element = this.controller.get(id);
+		this.element.widget = this;
+		return this;
+	},
+	
+	doSetup: function(id)
+	{
+		//this.element = this.controller.get(id);
 		
 		this.myAccountActions = this.element.down('#my-account-actions');
 		this.myAccountActions.observe(Mojo.Event.tap , this.myAccountActionsClick);
@@ -27,14 +34,34 @@ Twee.MyAccountView = Class.create({
 		
 		this.listFooter = this.element.down('#lists-list-footer');
 		
-		this.element.widget = this;
+		//this.element.widget = this;
 		return this;
+	},
+	
+	doCleanup: function()
+	{
+		this.myAccountActions.stopObserving(Mojo.Event.tap , this.myAccountActionsClick);
+		this.listElement.stopObserving(Mojo.Event.tap , this.listsClick);
 	},
 	
 	cleanup: function()
 	{
-		this.myAccountActions.stopObserving(Mojo.Event.tap , this.myAccountActionsClick);
-		this.listElement.stopObserving(Mojo.Event.tap , this.listsClick);
+		
+		if (this.hasBeenSetup)
+		{
+			this.doCleanup();
+			this.hasBeenSetup = false;
+		}
+	},
+	
+	aboutToActivate: function()
+	{
+		if (!this.hasBeenSetup)
+		{
+			this.doSetup();
+			this.hasBeenSetup = true;
+		}
+		
 	},
 	
 	activate: function()

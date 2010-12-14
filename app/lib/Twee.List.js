@@ -42,7 +42,7 @@ Twee.List = Class.create({
 		}
 		
 		this.element.widget = this;
-		if (this.useStorage)
+		if (this.useStorage && id != "messages-view") // hack no cache
 		{
 			this.getTweets();
 		}
