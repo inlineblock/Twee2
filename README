@@ -1,0 +1,5 @@
+Twee is a Twitter client for WebOS released June 2010 with some updates thereafter.
+Delicious Morsel LLC has decided to open source all code related to Twee, under the MIT License.
+
+The Palm WebOS SDK is required to make a proper build.
+Please file bugs here on GitHub and feel free to contribute code.
